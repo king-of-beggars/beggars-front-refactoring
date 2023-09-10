@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@common-assets/*": ["src/common/assets/*"],
+        "@common-components/*": ["src/common/components/*"],
+        "@common-constants/*": ["src/common/constants/*"],
+        "@common-providers/*": ["src/common/providers/*"],
+        "@common-styles/*": ["src/common/styles/*"],
+        "@common-utils/*": ["src/common/utils/*"],
+        "@feature-auth/*" : ["src/features/auth/*"],
+        "@feature-board/*" : ["src/features/board/*"],
+        "@feature-cashbook/*" : ["src/features/cashbook/*"],
+        "@feature-deal/*" : ["src/features/deal/*"],
+        "@feature-main/*" : ["src/features/main/*"],
+        "@router/*" : ["src/router/*"]
+      }
+    },
+    "exclude": ["node_modules"]
+  }
+  

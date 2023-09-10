@@ -1,0 +1,20 @@
+[type]([scope]): [Short Description]
+
+[Detailed multi-line description (if needed)]
+
+Related Issue: #[issue number]
+
+
+ex) style(SmallBtn.jsx): 스타일링 수정
+
+# type list
+feat: 새로운 기능 추가
+fix: 버그 수정
+chore: 빌드 업무 수정, 패키지 매니저 수정 등
+docs: 문서 수정
+style: 코드 스타일 변경 (스타일링 변경, 포맷 변경, 세미콜론 누락, 공백 등 포함)
+refactor: 코드 리팩토링
+perf: 성능 개선 코드
+test: 테스트 코드 추가, 테스트 수정
+
+# scope : 변경된 컴포넌트나 수정 범위 등
