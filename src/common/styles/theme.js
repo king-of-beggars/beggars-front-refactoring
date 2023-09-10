@@ -1,11 +1,13 @@
 const theme = {
     color: {
-        blacks: {
-            100: "#9C9C9C",
-            200: "#6C6C6C",
-            300: "#3C3C3C",
-            400: "#000000"
-        }
+        grayscale: {
+            0: "#FFFFFF",
+            200: "#9C9C9C",
+            400: "#6C6C6C",
+            600: "#3C3C3C",
+            900: "#000000"
+        },
+
     },
     modal: {
         padding: {
