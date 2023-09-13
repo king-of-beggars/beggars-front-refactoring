@@ -1,11 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 
 import CommonBtnStyle from "@common-components/button/CommonBtnStyle"
 
-function SmallBtn({ children }) {
+function SmallBtn({ color, children }) {
+  const theme = useTheme()
+  const actualColor = color || theme.color.grayscale[900]
+
   return (
-  <SmallBtnStyle>{children}</SmallBtnStyle>
+  <SmallBtnStyle color={actualColor}>{children}</SmallBtnStyle>
   )
 }
 

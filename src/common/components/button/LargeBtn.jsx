@@ -1,11 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 
 import CommonBtnStyle from "@common-components/button/CommonBtnStyle"
 
-function LargeBtn({ children }) {
+function LargeBtn({ color, children }) {
+  const theme = useTheme()
+  const actualColor = color || theme.color.grayscale[900]
+
   return (
-  <LargeBtnStyle>{children}</LargeBtnStyle>
+  <LargeBtnStyle color={actualColor}>{children}</LargeBtnStyle>
   )
 }
 
