@@ -35,10 +35,16 @@ const ModalSmStyle = styled.div`
     > .modal-text {
         width: inherit;
         text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
     }
 
     > .modal-btns {
         display: flex;
+        flex-grow: 0;
         gap: ${props => props.theme.button.gap.modal};
     }
 `
