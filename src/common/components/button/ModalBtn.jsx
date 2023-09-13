@@ -3,7 +3,7 @@ import { useTheme } from "styled-components"
 
 import ModalBtnStyle from '@common-components/button/ModalBtnStyle'
 
-function ModalBtn({ color, size, children}) {
+function ModalBtn({ color, size, label }) {
     const theme = useTheme()
     const actualColor = color || theme.color.grayscale[900]
     let actualSize;
@@ -23,7 +23,7 @@ function ModalBtn({ color, size, children}) {
     }
 
     return (
-        <ModalBtnStyle color={actualColor} width={actualSize}>{children}</ModalBtnStyle>
+        <ModalBtnStyle color={actualColor} width={actualSize}>{label}</ModalBtnStyle>
     )
 }
 

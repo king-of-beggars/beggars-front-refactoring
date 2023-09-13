@@ -10,13 +10,13 @@ export default {
     }
 }
 
-const Template = (args) => <ModalBtn {...args}>{args.children}</ModalBtn> 
+const Template = (args) => <ModalBtn {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
     title: "Default",
     size: "sm",
-    children: "ModalBtn-sm",
+    label: "ModalBtn-sm",
     color: undefined
 }
 
@@ -24,7 +24,7 @@ export const ExtraLarge = Template.bind({})
 ExtraLarge.args = {
     title: "Extra Large",
     size: "xl",
-    children: "ModalBtn-xl",
+    label: "ModalBtn-xl",
     color: undefined
 }
 
@@ -32,7 +32,7 @@ export const Large = Template.bind({})
 Large.args = {
     title: "Large",
     size: "lg",
-    children: "ModalBtn-lg",
+    label: "ModalBtn-lg",
     color: undefined
 }
 
@@ -40,6 +40,6 @@ export const ExtraSmall = Template.bind({})
 ExtraSmall.args = {
     title: "Extra Small",
     size: "xs",
-    children: "ModalBtn-xs",
+    label: "ModalBtn-xs",
     color: undefined
 }
