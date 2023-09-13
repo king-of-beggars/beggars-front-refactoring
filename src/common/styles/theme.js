@@ -1,4 +1,11 @@
 const theme = {
+    font: {
+        serif: "DOSIyagiMedium",
+        sans: "DOSGothic",
+        size: {
+            default: "20px"
+        }
+    },
     color: {
         grayscale: {
             0: "#FFFFFF",
