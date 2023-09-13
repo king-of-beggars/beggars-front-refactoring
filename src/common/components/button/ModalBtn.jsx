@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from "styled-components"
 
-import ModalBtnStyle from '@common-components/button/ModalBtnStyle'
+import { ModalBtnStyle } from "@common-styles"
 
 function ModalBtn({ color, size, label }) {
     const theme = useTheme()

@@ -1,0 +1,1 @@
+export { default as ModalSm } from "@common-components/modal/ModalSm"
