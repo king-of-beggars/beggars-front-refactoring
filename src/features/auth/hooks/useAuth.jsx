@@ -3,6 +3,7 @@ import { useMutation } from 'react-query';
 import { useLocation } from 'react-router-dom';
 import { AuthAPI } from 'common/utils/api';
 
+
 function useAuth() {
     const location = useLocation()
     console.log("current location:::", location)
