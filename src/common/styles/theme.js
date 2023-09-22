@@ -20,6 +20,15 @@ const theme = {
         },
 
     },
+    input: {
+        modal: {
+            width: "100%",
+            height: "50px",
+            borderRadius: "15px",
+            labelWidth: "78px",
+        },
+
+    },
     modal: {
         minSize: {
             sm: {
@@ -46,7 +55,6 @@ const theme = {
             lg: "34px"
         },
         radius: "10px",
-
     },
     button: {
         width: {
