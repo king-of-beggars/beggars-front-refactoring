@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { useMutation } from 'react-query';
 import { useLocation } from 'react-router-dom';
-import { AuthAPI } from 'common/utils/api';
 
+import { AuthAPI } from 'common/utils/api';
+import { encrypt, decrypt } from "@feature-auth/utils/crypto";
 
 function useAuth() {
     const location = useLocation()
@@ -10,9 +11,9 @@ function useAuth() {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     const checkLogin = () => {
-        const refreshToken = localStorage.getItem('refreshToken')
-        const userId = localStorage.getItem('userId')
-        const nickname = localStorage.getItem('nickname')
+        const refreshToken = decrypt(localStorage.getItem('refreshToken'))
+        const userId = decrypt(localStorage.getItem('userId'))
+        const nickname = decrypt(localStorage.getItem('nickname'))
 
         if (refreshToken && userId && nickname) {
             setIsLoggedIn(true)
@@ -22,10 +23,10 @@ function useAuth() {
     }
 
     const _setLogin = (accessToken, refreshToken, userId, nickname) => {
-        localStorage.setItem('accessToken', accessToken);
-        localStorage.setItem('refreshToken', refreshToken);
-        localStorage.setItem('userId', userId);
-        localStorage.setItem('nickname', nickname);
+        localStorage.setItem('accessToken', encrypt(accessToken));
+        localStorage.setItem('refreshToken', encrypt(refreshToken));
+        localStorage.setItem('userId', encrypt(userId));
+        localStorage.setItem('nickname', encrypt(nickname));
     }
 
     const logout = () => {
