@@ -3,7 +3,10 @@ const theme = {
         serif: "DOSIyagiMedium",
         sans: "DOSGothic",
         size: {
-            default: "20px"
+            lg: "20px",
+            default: "16px",
+            sm: "14px",
+            xs: "10px",
         }
     },
     color: {
