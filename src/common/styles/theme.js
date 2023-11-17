@@ -3,7 +3,10 @@ const theme = {
         serif: "DOSIyagiMedium",
         sans: "DOSGothic",
         size: {
-            default: "20px"
+            lg: "20px",
+            default: "16px",
+            sm: "14px",
+            xs: "10px",
         }
     },
     color: {
@@ -17,6 +20,15 @@ const theme = {
         shadows: {
             250: "rgba(0, 0, 0, 0.25)",
             500: "rgba(0, 0, 0, 0.5)",
+        },
+
+    },
+    input: {
+        modal: {
+            width: "100%",
+            height: "50px",
+            borderRadius: "15px",
+            labelWidth: "78px",
         },
 
     },
@@ -46,7 +58,6 @@ const theme = {
             lg: "34px"
         },
         radius: "10px",
-
     },
     button: {
         width: {
