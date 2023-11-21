@@ -1,11 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function LabeledInput({ label, placeholder }) {
+function LabeledInput({ label, placeholder, text, changeHandler }) {
   return (
     <LabeledInputStyle>
       <label for="labeledInput">{label}</label>
-      <input id="labeledInput" type="text" placeholder={placeholder} autoComplete="off"/>
+      <input
+        id="labeledInput"
+        type="text"
+        value={text}
+        placeholder={placeholder}
+        autoComplete="off"
+        onChange={changeHandler}
+      />
     </LabeledInputStyle>
   )
 }
