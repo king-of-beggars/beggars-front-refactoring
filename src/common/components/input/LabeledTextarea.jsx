@@ -1,11 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function LabeledTextarea({ label, placeholder }) {
+function LabeledTextarea({ label, placeholder, text, changeHandler }) {
     return (
       <LabeledTextareaStyle>
         <label for="labeledTextarea">{label}</label>
-        <textarea id="labeledTextarea" type="text" placeholder={placeholder} autoComplete="off"/>
+        <textarea
+          id="labeledTextarea"
+          type="text"
+          rows="10"
+          value={text}
+          autoComplete="off"
+          onChange={changeHandler}
+        />
+        <div class="placeholder">{placeholder}</div>
       </LabeledTextareaStyle>
     )
   }
@@ -13,9 +21,9 @@ function LabeledTextarea({ label, placeholder }) {
   const LabeledTextareaStyle = styled.div`
   display: flex;
   width: ${props => props.theme.input.modal.width};
-  height: ${props => props.theme.input.modal.height};
+  position: relative;
 
-  label, input {
+  label, textarea {
     display: flex;
     align-items: center;
     font-size: ${props => props.theme.font.size.sm};
@@ -26,26 +34,40 @@ function LabeledTextarea({ label, placeholder }) {
   label {
     justify-content: center;
     width: ${props => props.theme.input.modal.labelWidth};
-    height: 100%;
     border-radius: ${props => props.theme.input.modal.borderRadius} 0 0 ${props => props.theme.input.modal.borderRadius};
     background-color: ${props => props.theme.color.grayscale[600]};
     color: ${props => props.theme.color.grayscale[0]};
   }
 
-  input {
+  textarea {
     width: calc(100% - ${props => props.theme.input.modal.labelWidth});
     border-radius: 0 ${props => props.theme.input.modal.borderRadius} ${props => props.theme.input.modal.borderRadius} 0;
     border-top: 1px solid ${props => props.theme.color.grayscale[200]};
     border-right: 1px solid ${props => props.theme.color.grayscale[200]};
     border-bottom: 1px solid ${props => props.theme.color.grayscale[200]};
     border-left: none;
-    padding: 0 ${props => props.theme.modal.padding.sm};
+    padding: ${props => props.theme.modal.padding.sm};
     &:focus {
       outline: none;
     }
     &::placeholder {
       color: ${props => props.theme.color.grayscale[200]};
     }
+    &:focus + .placeholder {
+      display: none;
+    }
+  }
+
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: calc(${props => props.theme.input.modal.labelWidth} + ${props => props.theme.modal.padding.sm});
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: ${props => props.theme.font.size.sm};
+    font-family: ${props => props.theme.font.sans};
+    font-size: ${props => props.theme.font.size.sm};
+    color: ${props => props.theme.color.grayscale[200]};
   }
 `
 
