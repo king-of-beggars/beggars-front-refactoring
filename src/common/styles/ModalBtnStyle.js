@@ -5,7 +5,7 @@ const ModalBtnStyle = styled.button`
     height: ${props => props.theme.button.height};
     background-color: ${props => !!props.color ? props.color : props.theme.color.grayscale[900]};
     font-family: ${props => props.theme.font.serif};
-    font-size: ${props => props.theme.font.size.default};
+    font-size: ${props => props.theme.font.size.sm};
     color: ${props => props.theme.color.grayscale[0]};
     
     border: none;
